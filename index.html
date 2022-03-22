@@ -8,6 +8,7 @@
     <title>Code Quiz</title>
   </head>
   <body>
+    <!-- Nav Bar -->
     <nav>
       <div class="topnav">
         <a class="highscore" href="http://#home">View Highscores</a>
@@ -15,6 +16,22 @@
       </div>
     </nav>
 
+    <!-- Start Quiz -->
+    <div class="startQuiz-container">
+      <div>
+        <h1>Bob's Burgers Quiz</h1>
+        <h2>
+          Test your Bob's Burgers knowledge with this eight question quiz!
+          <br />
+          You will have 60 seconds to answer, and each wrong answer will deduct
+          ten seconds from your timer.
+          <br />
+          Good Luck!!
+        </h2>
+      </div>
+    </div>
+
+    <!-- Quiz Question Container -->
     <div class="question-container" id="question">Question goes here.</div>
     <div class="option-container">
       <button class="option" id="op1">option1</button>
@@ -26,7 +43,6 @@
       <button class="option" id="op4">option4</button>
     </div>
     <div class="navigation">
-      <button class="evaluate">Evaluate</button>
       <button class="next">Next</button>
     </div>
     <script src="./assets/js/script.js"></script>
