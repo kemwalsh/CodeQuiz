@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Code Quiz</title>
   </head>
-  <body>
+  <body class="container">
     <!-- Nav Bar -->
     <nav>
       <div class="topnav">
@@ -17,8 +17,8 @@
     </nav>
 
     <!-- Start Quiz -->
-    <div class="startQuiz-container">
-      <div>
+    <div>
+      <div class="startQuiz-container">
         <h1>Bob's Burgers Quiz</h1>
         <h2>
           Test your Bob's Burgers knowledge with this eight question quiz!
@@ -32,8 +32,10 @@
     </div>
 
     <!-- Quiz Question Container -->
-    <div class="question-container" id="question">Question goes here.</div>
-    <div class="option-container">
+    <div class="main" class="question-container" id="question">
+      Question goes here.
+    </div>
+    <div class="main" class="option-container">
       <button class="option" id="op1">option1</button>
 
       <button class="option" id="op2">option2</button>
@@ -42,7 +44,7 @@
 
       <button class="option" id="op4">option4</button>
     </div>
-    <div class="navigation">
+    <div class="main" class="navigation">
       <button class="next">Next</button>
     </div>
     <script src="./assets/js/script.js"></script>

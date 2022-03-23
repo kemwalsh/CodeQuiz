@@ -6,7 +6,8 @@ var secondsLeft = 60;
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
-    timerInterval.textContent = "Time: " + secondsLeft;
+    console.log(secondsLeft);
+    timeEl.textContent = "Time: " + secondsLeft;
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
