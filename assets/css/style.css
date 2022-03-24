@@ -1,20 +1,17 @@
-.container {
-  display: grid; 
-  grid-template-columns: 0.6fr 1.8fr 0.6fr; 
-  grid-template-rows: 0.3fr 0.3fr 2.4fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "highscore . timer"
-    ". . ."
-    ". main ."
-    ". . ."; 
+:root {
+  font-family: 'Pompiere';
+  background-image: url("/assets/images/bb.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.main { grid-area: main; }
-.highscore { grid-area: highscore; }
-.timer { grid-area: timer; }
-
-
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
   /* Style the links inside the navigation bar */
   .topnav a {
     color: #131111;
@@ -28,10 +25,24 @@
     background-color: rgb(124, 125, 139);
     color: rgb(44, 42, 59);
   }
+  
+  /* Position of nav aspects
+  .highscore {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .timer {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   /* Start Quiz */
-  .startQuiz-Container {
-    border: 1px solid black;
-    text-align: center;
-    color: rgb(231, 13, 13);
+  /* .startQuiz-Container {
+    display: flex;
+    justify-content: center;
   }
+
+  .question-container {
+    justify-content: center;
+  } */ 

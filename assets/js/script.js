@@ -1,29 +1,5 @@
-var timeEl = document.querySelector(".timer");
-
-var secondsLeft = 60;
-
-// Timer Function
-function setTime() {
-  var timerInterval = setInterval(function () {
-    secondsLeft--;
-    console.log(secondsLeft);
-    timeEl.textContent = "Time: " + secondsLeft;
-
-    if (secondsLeft === 0) {
-      clearInterval(timerInterval);
-      sendMessage();
-    }
-  }, 1000);
-}
-
-function sendMessage() {
-  timeEl.textContent = "You ran out of time :( Try again";
-}
-
-setTime();
-
 // Quiz Questions
-const Questions = [
+const questions = [
   {
     id: 0,
     q: "What are the kids names in Bob's Burgers?",
@@ -105,3 +81,35 @@ const Questions = [
     ],
   },
 ];
+
+var timeEl = document.querySelector(".timer");
+
+var secondsLeft = 60;
+
+// Timer Function
+function setTime() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    console.log(secondsLeft);
+    timeEl.textContent = "Time: " + secondsLeft;
+
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+  }, 1000);
+}
+
+function sendMessage() {
+  timeEl.textContent = "You ran out of time :( Try again";
+}
+
+setTime();
+
+// Questions Function
+
+// var startBtn = document.querySelector(".startBtn");
+
+// startBtn.addEventListener("click", function() {
+//  questions[0].q.a[];
+// })
