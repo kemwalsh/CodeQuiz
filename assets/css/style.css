@@ -73,8 +73,10 @@
   }
 
 /* WTF FIX */
-  .nextBtn {
+  /* .nextBtn {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
+
+  /* Background image also not showing up on github pages */
