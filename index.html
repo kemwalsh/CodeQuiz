@@ -21,37 +21,36 @@
     </nav>
 
     <!-- Start Quiz -->
-    <div>
-      <div class="startQuiz-container">
-        <h1>Bob's Burgers Quiz</h1>
-        <h2>
-          Test your Bob's Burgers knowledge with this eight question quiz!
-          <br />
-          You will have 60 seconds to answer, and each wrong answer will deduct
-          ten seconds from your timer.
-          <br />
-          Good Luck!!
-        </h2>
-        <button class="startBtn">Start!</button>
-      </div>
+    <div class="startContainer">
+      <h1>Bob's Burgers Quiz</h1>
+      <h2>
+        Test your Bob's Burgers knowledge with this eight question quiz!
+        <br />
+        You will have 60 seconds to answer, and each wrong answer will deduct
+        ten seconds from your timer.
+        <br />
+        Good Luck!!
+      </h2>
+      <button class="startBtn">Start!</button>
     </div>
 
     <!-- Quiz Question Container -->
     <div>
-      <div class="question-container" id="question">Question goes here.</div>
+      <div class="questionContainer" id="question">Question goes here.</div>
+      <div class="optionContainer">
+        <button class="optionBtn" id="op1">option1</button>
+
+        <button class="optionBtn" id="op2">option2</button>
+
+        <button class="optionBtn" id="op3">option3</button>
+
+        <button class="optionBtn" id="op4">option4</button>
+      </div>
       <div>
-        <button class="option" id="op1">option1</button>
-
-        <button class="option" id="op2">option2</button>
-
-        <button class="option" id="op3">option3</button>
-
-        <button class="option" id="op4">option4</button>
+        <button class="nextBtn">Next</button>
       </div>
     </div>
-    <div class="main" class="navigation">
-      <button class="next">Next</button>
-    </div>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
