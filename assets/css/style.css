@@ -1,6 +1,6 @@
 :root {
   font-family: 'Pompiere';
-  background-image: url("/assets/images/bb.png");
+  background-image: url("../images/bb.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -73,10 +73,10 @@
   }
 
 /* WTF FIX */
-  /* .nextBtn {
+  .nextBtnDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-  } */
+  }
 
-  /* Background image also not showing up on github pages */
+  /* Background image also not showing up on github pages, but shows up on live server */
