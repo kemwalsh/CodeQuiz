@@ -1,84 +1,49 @@
 // Quiz Questions
 const questions = [
   {
-    id: 0,
     q: "What are the kids names in Bob's Burgers?",
-    a: [
-      { text: "Frank, Katy, Marcie", isCorrect: false },
-      { text: "Gene, Louise, Tina", isCorrect: true },
-      { text: "Gene, Emily, Beth", isCorrect: false },
-      { text: "Bob, Maggie, Gina", isCorrect: false },
+    a: "Gene, Louise, Tina",
+    c: [
+      "Frank, Katy, Marcie",
+      "Gene, Louise, Tina",
+      "Gene, Emily, Beth",
+      "Bob, Maggie, Gina",
     ],
   },
   {
-    id: 1,
     q: "What is Bob's wife's name?",
-    a: [
-      { text: "Marge", isCorrect: false },
-      { text: "Phyllis", isCorrect: false },
-      { text: "Annie", isCorrect: false },
-      { text: "Linda", isCorrect: true },
-    ],
+    a: "Linda",
+    c: ["Marge", "Phyllis", "Annie", "Linda"],
   },
   {
-    id: 2,
     q: "What is Louise's typical hat?",
-    a: [
-      { text: "Tophat", isCorrect: false },
-      { text: "Bunny Ears Hat", isCorrect: true },
-      { text: "Helmet", isCorrect: false },
-      { text: "Nothing", isCorrect: false },
-    ],
+    a: "Bunny Ears Hat",
+    c: ["Tophat", "Bunny Ears Hat", "Helmet", "Nothing"],
   },
   {
-    id: 3,
     q: "Which of the Belcher's is a huge music fan?",
-    a: [
-      { text: "Gene", isCorrect: true },
-      { text: "Tina", isCorrect: false },
-      { text: "Bob", isCorrect: false },
-      { text: "Linda", isCorrect: false },
-    ],
+    a: "Gene",
+    c: ["Gene", "Tina", "Bob", "Linda"],
   },
   {
-    id: 4,
     q: "What business is always next door to the restaurant?",
-    a: [
-      { text: "Yoga Studio", isCorrect: false },
-      { text: "Grocery Store", isCorrect: false },
-      { text: "Bank", isCorrect: false },
-      { text: "Funeral Home", isCorrect: true },
-    ],
+    a: "Funeral Home",
+    c: ["Yoga Studio", "Grocery Store", "Bank", "Funeral Home"],
   },
   {
-    id: 5,
     q: "Who is Bob's rival?",
-    a: [
-      { text: "Jimmy Pesto", isCorrect: true },
-      { text: "Frank Ferry", isCorrect: false },
-      { text: "Matt Gravel", isCorrect: false },
-      { text: "Sara Silk", isCorrect: false },
-    ],
+    a: "Jimmy Pesto",
+    c: ["Jimmy Pesto", "Frank Ferry", "Matt Gravel", "Sara Silk"],
   },
   {
-    id: 6,
     q: "Who is Bob's closest friend?",
-    a: [
-      { text: "Jimmy", isCorrect: false },
-      { text: "Danny", isCorrect: false },
-      { text: "Teddy", isCorrect: true },
-      { text: "Mort", isCorrect: false },
-    ],
+    a: "Teddy",
+    c: ["Jimmy", "Danny", "Teddy", "Mort"],
   },
   {
-    id: 7,
     q: "Who does Tina have a huge crush on?",
-    a: [
-      { text: "Zeke", isCorrect: false },
-      { text: "Jimmy Pesto", isCorrect: true },
-      { text: "Regular-Sized Rudy", isCorrect: false },
-      { text: "Boo Boo", isCorrect: false },
-    ],
+    a: "Jimmy Pesto Jr.",
+    c: ["Zeke", "Jimmy Pesto Jr.", "Regular-Sized Rudy", "Boo Boo"],
   },
 ];
 
@@ -90,7 +55,7 @@ var secondsLeft = 60;
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
-    console.log(secondsLeft);
+    // console.log(secondsLeft);
     timeEl.textContent = "Time: " + secondsLeft;
 
     if (secondsLeft === 0) {
@@ -108,8 +73,32 @@ setTime();
 
 // Questions Function
 
-// var startBtn = document.querySelector(".startBtn");
+var startBtn = document.querySelector(".startBtn");
 
-// startBtn.addEventListener("click", function() {
-//  questions[0].q.a[];
-// })
+startBtn.addEventListener("click", function () {
+  questions[0].q;
+  // console.log(questions[0].q);
+  questions[0].a[0];
+  // console.log(questions[0].a[0]);
+});
+
+const questionsString = JSON.stringify(questions[0].q);
+// console.log(questionsString);
+var questionContainer = document.querySelector(".questionContainer");
+questionContainer.textContent = questionsString;
+
+const optionContainer = JSON.stringify(questions[0].a[0]);
+// console.log(optionContainer);
+
+function optContainer() {
+  var optA = document.createElement("button");
+  var optB = document.createElement("button");
+  var optC = document.createElement("button");
+  var optD = document.createElement("button");
+  optA.innerHTML = optionContainer;
+  document.body.appendChild(optA);
+}
+
+// stringify answers
+// create options elements
+// do querySelector/text content to get the answers to screen

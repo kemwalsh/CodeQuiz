@@ -72,11 +72,8 @@
     flex-direction: row;
   }
 
-/* WTF FIX */
   .nextBtnDiv {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  /* Background image also not showing up on github pages, but shows up on live server */
