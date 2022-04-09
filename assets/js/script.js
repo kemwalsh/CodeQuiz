@@ -2,48 +2,83 @@
 const questions = [
   {
     q: "What are the kids names in Bob's Burgers?",
-    a: "Gene, Louise, Tina",
-    c: [
-      "Frank, Katy, Marcie",
-      "Gene, Louise, Tina",
-      "Gene, Emily, Beth",
-      "Bob, Maggie, Gina",
-    ],
+    a: "b",
+    choices: {
+      a: "Frank, Katy, Marcie",
+      b: "Gene, Louise, Tina",
+      c: "Gene, Emily, Beth",
+      d: "Bob, Maggie, Gina",
+    },
   },
   {
     q: "What is Bob's wife's name?",
-    a: "Linda",
-    c: ["Marge", "Phyllis", "Annie", "Linda"],
+    a: "d",
+    choices: {
+      a: "Marge",
+      b: "Phyllis",
+      c: "Annie",
+      d: "Linda",
+    },
   },
   {
     q: "What is Louise's typical hat?",
-    a: "Bunny Ears Hat",
-    c: ["Tophat", "Bunny Ears Hat", "Helmet", "Nothing"],
+    a: "b",
+    choices: {
+      a: "Tophat",
+      b: "Bunny Ears Hat",
+      c: "Helmet",
+      d: "Nothing",
+    },
   },
   {
     q: "Which of the Belcher's is a huge music fan?",
-    a: "Gene",
-    c: ["Gene", "Tina", "Bob", "Linda"],
+    a: "a",
+    choices: {
+      a: "Gene",
+      b: "Tina",
+      c: "Bob",
+      d: "Linda",
+    },
   },
   {
     q: "What business is always next door to the restaurant?",
-    a: "Funeral Home",
-    c: ["Yoga Studio", "Grocery Store", "Bank", "Funeral Home"],
+    a: "d",
+    choices: {
+      a: "Yoga Studio",
+      b: "Grocery Store",
+      c: "Bank",
+      d: "Funeral Home",
+    },
   },
   {
     q: "Who is Bob's rival?",
-    a: "Jimmy Pesto",
-    c: ["Jimmy Pesto", "Frank Ferry", "Matt Gravel", "Sara Silk"],
+    a: "a",
+    choices: {
+      a: "Jimmy Pesto",
+      b: "Frank Ferry",
+      c: "Matt Gravel",
+      d: "Sara Silk",
+    },
   },
   {
     q: "Who is Bob's closest friend?",
-    a: "Teddy",
-    c: ["Jimmy", "Danny", "Teddy", "Mort"],
+    a: "c",
+    choices: {
+      a: "Jimmy",
+      b: "Danny",
+      c: "Teddy",
+      d: "Mort",
+    },
   },
   {
     q: "Who does Tina have a huge crush on?",
-    a: "Jimmy Pesto Jr.",
-    c: ["Zeke", "Jimmy Pesto Jr.", "Regular-Sized Rudy", "Boo Boo"],
+    a: "b",
+    choices: {
+      a: "Zeke",
+      b: "Jimmy Pesto Jr.",
+      c: "Regular-Sized Rudy",
+      d: "Boo Boo",
+    },
   },
 ];
 
@@ -69,8 +104,6 @@ function sendMessage() {
   timeEl.textContent = "You ran out of time :( Try again";
 }
 
-setTime();
-
 // Questions Function
 
 var startBtn = document.querySelector(".startBtn");
@@ -78,26 +111,35 @@ var startBtn = document.querySelector(".startBtn");
 startBtn.addEventListener("click", function () {
   questions[0].q;
   // console.log(questions[0].q);
-  questions[0].a[0];
-  // console.log(questions[0].a[0]);
+  questions[0].c[0];
+  // console.log(questions[0].c[0]);
+  setTime();
 });
 
-const questionsString = JSON.stringify(questions[0].q);
-// console.log(questionsString);
-var questionContainer = document.querySelector(".questionContainer");
-questionContainer.textContent = questionsString;
-
-const optionContainer = JSON.stringify(questions[0].a[0]);
-// console.log(optionContainer);
-
-function optContainer() {
-  var optA = document.createElement("button");
-  var optB = document.createElement("button");
-  var optC = document.createElement("button");
-  var optD = document.createElement("button");
-  optA.innerHTML = optionContainer;
-  document.body.appendChild(optA);
+function showQuestion(questions, quizContainer) {
+  var output = [];
+  var c;
+  for (var i = 0; i < questions.length; i++) {
+    choices = [];
+  }
 }
+
+// const questionsString = JSON.stringify(questions[0].q);
+// console.log(questionsString);
+// var questionContainer = document.querySelector(".questionContainer");
+// questionContainer.textContent = questionsString;
+
+// const optionContainer = JSON.stringify(questions[0].a[0]);
+// // console.log(optionContainer);
+
+// function optContainer() {
+//   var optA = document.createElement("buttonA");
+//   var optB = document.createElement("buttonB");
+//   var optC = document.createElement("buttonC");
+//   var optD = document.createElement("buttonD");
+//   optA.innerHTML = optionContainer;
+//   document.body.appendChild(optA);
+// }
 
 // stringify answers
 // create options elements
