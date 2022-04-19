@@ -12,7 +12,7 @@ const questions = [
   },
   {
     q: "What is Bob's wife's name?",
-    a: "d",
+    a: "Linda",
     choices: {
       a: "Marge",
       b: "Phyllis",
@@ -22,7 +22,7 @@ const questions = [
   },
   {
     q: "What is Louise's typical hat?",
-    a: "b",
+    a: "Bunny Ears Hat",
     choices: {
       a: "Tophat",
       b: "Bunny Ears Hat",
@@ -32,7 +32,7 @@ const questions = [
   },
   {
     q: "Which of the Belcher's is a huge music fan?",
-    a: "a",
+    a: "Gene",
     choices: {
       a: "Gene",
       b: "Tina",
@@ -42,7 +42,7 @@ const questions = [
   },
   {
     q: "What business is always next door to the restaurant?",
-    a: "d",
+    a: "Funeral Home",
     choices: {
       a: "Yoga Studio",
       b: "Grocery Store",
@@ -52,7 +52,7 @@ const questions = [
   },
   {
     q: "Who is Bob's rival?",
-    a: "a",
+    a: "Jimmy Pesto",
     choices: {
       a: "Jimmy Pesto",
       b: "Frank Ferry",
@@ -62,7 +62,7 @@ const questions = [
   },
   {
     q: "Who is Bob's closest friend?",
-    a: "c",
+    a: "Teddy",
     choices: {
       a: "Jimmy",
       b: "Danny",
@@ -72,7 +72,7 @@ const questions = [
   },
   {
     q: "Who does Tina have a huge crush on?",
-    a: "b",
+    a: "Jimmy Pesto Jr.",
     choices: {
       a: "Zeke",
       b: "Jimmy Pesto Jr.",
@@ -111,10 +111,6 @@ function sendMessage() {
 var startBtn = document.querySelector(".startBtn");
 
 startBtn.addEventListener("click", function () {
-  // questions[0].q;
-  // console.log(questions[0].q);
-  // questions[0].c[0];
-  // console.log(questions[0].c[0]);
   setTime();
 
   var startContainer = document.querySelector(".startContainer");
@@ -132,14 +128,6 @@ function displayQuestion () {
   questionH2.textContent = questions[currentIndex].q;
 
   quizContainer.append(questionH2);
-  // var choicesH3a = document.createElement("h3");
-  // var choicesH3b = document.createElement("h3");
-  // var choicesH3c = document.createElement("h3");
-  // var choicesH3d = document.createElement("h3");
-  // choicesH3a.textContent = questions[0].choices.a;
-  // choicesH3b.textContent = questions[0].choices.b;
-  // choicesH3c.textContent = questions[0].choices.c;
-  // choicesH3d.textContent = questions[0].choices.d;
 
   for(choice in questions[currentIndex].choices) {
     var choicesBtn = document.createElement("button");
@@ -169,32 +157,3 @@ function displayQuestion () {
     quizContainer.append(choicesBtn)
   }
 }
-
-function showQuestion(questions, quizContainer) {
-  var output = [];
-  var c;
-  for (var i = 0; i < questions.length; i++) {
-    choices = [];
-  }
-}
-
-// const questionsString = JSON.stringify(questions[0].q);
-// console.log(questionsString);
-// var questionContainer = document.querySelector(".questionContainer");
-// questionContainer.textContent = questionsString;
-
-// const optionContainer = JSON.stringify(questions[0].a[0]);
-// // console.log(optionContainer);
-
-// function optContainer() {
-//   var optA = document.createElement("buttonA");
-//   var optB = document.createElement("buttonB");
-//   var optC = document.createElement("buttonC");
-//   var optD = document.createElement("buttonD");
-//   optA.innerHTML = optionContainer;
-//   document.body.appendChild(optA);
-// }
-
-// stringify answers
-// create options elements
-// do querySelector/text content to get the answers to screen
